@@ -98,6 +98,31 @@ Share your setup on GitHub or X!
 📜 License
 MIT License — Share, modify, and enjoy!
 EOF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Write sample Hyprland config
 write_file "hypr/hyprland.conf" <<'EOF'
 Zee Dotfiles: Hyprland Config
