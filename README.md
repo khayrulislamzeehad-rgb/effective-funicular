@@ -1,51 +1,72 @@
-# 🌸 Zee Dotfiles — Ultimate Anime-Themed Arch Linux Hyprland Setup 🌸
+🌸 Zee Dotfiles — Ultimate Anime-Themed Arch Linux Hyprland Setup 🌸
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/wallpapers/sample.jpg" alt="Anime Wallpaper" width="300"/>
-  <br>
-  <em>Welcome to a stunning, anime-inspired desktop experience!</em>
-</p>
+  <img src="https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/wallpapers/sample.jpg" alt="Anime Wallpaper" width="300">
+  
 
-Welcome to **Zee Dotfiles**, a meticulously crafted, anime-inspired dotfiles repository for Arch Linux with Hyprland. This setup blends sleek, modern aesthetics with powerful functionality, perfect for ricers and Arch enthusiasts alike. ✨
+  Welcome to a stunning, anime-inspired desktop experience!
 
----
+Welcome to Zee Dotfiles, a meticulously crafted, anime-inspired dotfiles repository for Arch Linux with Hyprland. This setup blends sleek, modern aesthetics with powerful functionality, perfect for ricers and Arch enthusiasts alike. ✨
 
-## 🚀 Features
+🚀 Features
 
-| Feature                | Description                                      |
-|------------------------|--------------------------------------------------|
-| **Hyprland Config**    | Smooth animations, blur, gaps, custom keybinds   |
-| **Hyprpaper Rotator**  | Dynamic anime wallpapers with systemd service    |
-| **Alacritty Terminal** | Lightweight, GPU-accelerated terminal            |
-| **Zsh + Starship**     | Fast shell with anime-themed prompt              |
-| **Waybar for Hyprland**| Sway-inspired topbar with system stats           |
-| **Utilities**          | Uchiha quotes & fire effect scripts              |
-| **Installer**          | Seamless setup with `~/.config` symlinks          |
 
----
 
-## 🎮 Installation
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FeatureDescriptionHyprland ConfigSmooth animations, blur, gaps, custom keybindsHyprpaper RotatorDynamic anime wallpapers with systemd serviceAlacritty TerminalLightweight, GPU-accelerated terminalZsh + StarshipFast shell with anime-themed promptWaybar for HyprlandSway-inspired topbar with system statsUtilitiesUchiha quotes & fire effect scriptsInstallerSeamless setup with ~/.config symlinks
+
+🎮 Installation
 Get started with a single command to install and set up your Zee Dotfiles effortlessly:
 
-- **One-Command Installation**  
+One-Command Installation
+bashbash -c "$(curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh)" && cd ~/.local/share/zee-dotfiles && ./install.sh
+
+📋 Important Notes
+- This command downloads and runs the installer automatically.
+- **No Manual Input Required**: The script proceeds without needing 'y' confirmation.
+- **Internet**: Ensure an active connection.
+- **Dependencies**: Install first with:
   ```bash
-  bash -c "$(curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh)" && cd ~/.local/share/zee-dotfiles && ./install.sh
-  
-  📋 Important Notes
-  - This command downloads and runs the installer from GitHub.
-  - **Prompt**: Type `y` and press Enter to proceed.
-  - **Internet**: Ensure an active connection.
-  - **Dependencies**: Install first with:
-    ```bash
-    sudo pacman -S git curl hyprland hyprpaper alacritty zsh starship waybar
-    ```
-  - **Safety Check**: Review the script:
-    ```bash
-    curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh > install.sh
-    less install.sh
-    ```
-  
+  sudo pacman -S git curl hyprland hyprpaper alacritty zsh starship waybar
+  ```
+- **Safety Check**: Review the script:
+  ```bash
+  curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh > install.sh
+  less install.sh
+  ```
+
 
 Enable Wallpaper Rotator
 bashsystemctl --user enable --now hyprpaper.service
