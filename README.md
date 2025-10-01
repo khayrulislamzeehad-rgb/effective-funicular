@@ -95,6 +95,16 @@ Post on GitHub or X!
 “Those who break rules are scum, but abandoning friends is worse.” — Make it yours! ✨
 📜 License
 MIT
+
+
+
+
+
+
+
+
+
+
 EOF
 Write configs
 write_file "hypr/hyprland.conf" <<'EOF'
@@ -156,6 +166,9 @@ WantedBy=graphical-session.target
 EOF
 Write scripts
 write_file "scripts/random_quote.sh" <<'EOF'
+
+
+
 #!/bin/bash
 Random Quote by zeehadhaque
 quotes=("In the shinobi world, those who break rules are scum..."
@@ -165,6 +178,11 @@ echo "${quotes[$RANDOM % ${#quotes[@]}]}"
 EOF
 chmod +x "$DOTFILES_DIR/scripts/random_quote.sh"
 write_file "scripts/fire_effect.sh" <<'EOF'
+
+
+
+
+
 #!/bin/bash
 Fire Effect by zeehadhaque
 echo "🔥 Blazing terminal effect! 🔥"
