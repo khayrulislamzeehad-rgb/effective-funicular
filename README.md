@@ -19,20 +19,30 @@ Get started with a single command to install and set up your Zee Dotfiles effort
   bash -c "$(curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh)" && cd ~/.local/share/zee-dotfiles && ./install.sh
 
 
-text*Note: The script will prompt for confirmation. Type 'y' and press Enter to proceed. Ensure you have internet access and the following dependencies installed: `git`, `curl`, `hyprland`, `hyprpaper`, `alacritty`, `zsh`, `starship`, `waybar`. Install them with: `sudo pacman -S git curl hyprland hyprpaper alacritty zsh starship waybar`.*
+Important Notes:
 
-- **Step 2: Enable the Wallpaper Rotator**
-systemctl --user enable --now hyprpaper.service
-text- **Step 3: Customize Your Setup**
-- Add your favorite anime wallpapers to the `~/.local/share/zee-dotfiles/wallpapers/` directory.
-- Edit configuration files (e.g., `~/.local/share/zee-dotfiles/hypr/hyprland.conf`, `~/.local/share/zee-dotfiles/alacritty/alacritty.yml`) to personalize.
+This command will download and run the installer script directly from GitHub.
+The script will prompt for confirmation. Type y and press Enter to proceed.
+Ensure you have an active internet connection.
+Install required dependencies beforehand with:
+textsudo pacman -S git curl hyprland hyprpaper alacritty zsh starship waybar
 
-## Customization
-- Replace wallpapers in `wallpapers/` with your favorite anime art.
-- Edit `hyprland.conf`, `alacritty.yml`, `.zshrc`, or `starship.toml` for personalized flair.
-- Add your own scripts to `scripts/` for extra functionality.
+For safety, you can first download and review the script:
+textcurl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh > install.sh
+less install.sh
 
-Show off your rice on GitHub or X! ✨ *“In the shinobi world, those who break the rules are scum, but those who abandon their friends are worse than scum.”* — Customize and make it yours!
+Step 2: Enable the Wallpaper Rotator
+textsystemctl --user enable --now hyprpaper.service
 
-## License
-MIT License. Share, modify, and enjoy!
+Step 3: Customize Your Setup
+
+Add your favorite anime wallpapers to the ~/.local/share/zee-dotfiles/wallpapers/ directory.
+Edit configuration files (e.g., ~/.local/share/zee-dotfiles/hypr/hyprland.conf, ~/.local/share/zee-dotfiles/alacritty/alacritty.yml) to personalize.
+
+
+
+Customization
+
+Replace wallpapers in wallpapers/ with your favorite anime art.
+Edit hyprland.conf, alacritty.yml, .zshrc, or starship.toml for personalized flair.
+Add your own scripts to scripts/ for extra functionality.
