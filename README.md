@@ -1,11 +1,11 @@
-🌸 Zee Dotfiles — Ultimate Anime-Themed Arch Linux Hyprland Setup 🌸
+🌸 Zee Dotfiles 🌸
 
-  <img src="https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/wallpapers/sample.jpg" alt="Anime Wallpaper" width="300">
+  <img src="https://raw.githubusercontent.com/zeehadhaque/zee-dotfiles/main/wallpapers/sample.jpg" alt="Anime Wallpaper" width="300">
   
 
-  Welcome to a stunning, anime-inspired desktop experience!
+  A stunning anime-themed Arch Linux Hyprland setup!
 
-Welcome to Zee Dotfiles, a meticulously crafted, anime-inspired dotfiles repository for Arch Linux with Hyprland. This setup blends sleek, modern aesthetics with powerful functionality, perfect for ricers and Arch enthusiasts alike. ✨
+Welcome to Zee Dotfiles, crafted by zeehadhaque, an anime-inspired dotfiles repo for Arch Linux with Hyprland. Enjoy sleek aesthetics and powerful features! ✨
 
 🚀 Features
 
@@ -45,87 +45,60 @@ Welcome to Zee Dotfiles, a meticulously crafted, anime-inspired dotfiles reposit
 
 
 
-FeatureDescriptionHyprland ConfigSmooth animations, blur, gaps, custom keybindsHyprpaper RotatorDynamic anime wallpapers with systemd serviceAlacritty TerminalLightweight, GPU-accelerated terminalZsh + StarshipFast shell with anime-themed promptWaybar for HyprlandSway-inspired topbar with system statsUtilitiesUchiha quotes & fire effect scriptsInstallerSeamless setup with ~/.config symlinks
+FeatureDescriptionHyprland ConfigAnimations, blur, gaps, custom keybindsHyprpaper RotatorDynamic anime wallpapers with serviceAlacritty TerminalLightweight, GPU-accelerated terminalZsh + StarshipFast shell with anime promptWaybarSway-inspired topbar for HyprlandUtilitiesUchiha quotes, fire effect scriptsInstallerAuto setup with ~/.config symlinks
 
 🎮 Installation
-Get started with a single command to install and set up your Zee Dotfiles effortlessly:
+Install with one command:
 
-One-Command Installation
-bashbash -c "$(curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh)" && cd ~/.local/share/zee-dotfiles && ./install.sh
+One-Command Setup
+bashbash -c "$(curl -sL https://raw.githubusercontent.com/zeehadhaque/zee-dotfiles/main/install.sh)" && cd ~/.local/share/zee-dotfiles && ./install.sh
 
-📋 Important Notes
-- This command downloads and runs the installer automatically.
-- **No Manual Input Required**: The script proceeds without needing 'y' confirmation.
-- **Internet**: Ensure an active connection.
-- **Dependencies**: Install first with:
+📋 Notes
+- Runs automatically, no 'y' input needed.
+- Requires internet and dependencies:
   ```bash
   sudo pacman -S git curl hyprland hyprpaper alacritty zsh starship waybar
   ```
-- **Safety Check**: Review the script:
+- Safety: Review script first:
   ```bash
-  curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh > install.sh
+  curl -sL https://raw.githubusercontent.com/zeehadhaque/zee-dotfiles/main/install.sh > install.sh
   less install.sh
   ```
 
 
-Enable Wallpaper Rotator
+Enable Wallpaper
 bashsystemctl --user enable --now hyprpaper.service
 
-Customize Your Setup
+Customize
 
-Add anime wallpapers to ~/.local/share/zee-dotfiles/wallpapers/.
-Edit configs (e.g., hyprland.conf, alacritty.yml) to personalize.
+Add wallpapers to ~/.local/share/zee-dotfiles/wallpapers/.
+Edit hyprland.conf, alacritty.yml, etc.
 
 
 
 
 🎨 Customization
 
-Wallpapers: Replace wallpapers/ with your favorite anime art.
-Configs: Tweak hyprland.conf, alacritty.yml, .zshrc, or starship.toml.
-Scripts: Add your own to scripts/ for extra flair.
+Swap wallpapers/ with your anime art.
+Tweak configs in ~/.local/share/zee-dotfiles.
+Add scripts to scripts/.
 
 
-  <img src="https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/sample-screenshot.jpg" alt="Sample Setup" width="400">
+  <img src="https://raw.githubusercontent.com/zeehadhaque/zee-dotfiles/main/sample-screenshot.jpg" alt="Setup Preview" width="400">
   
 
-  Showcase your unique rice! 🌟
+  Show your rice! 🌟
 
 
-🌐 Show Off Your Rice
-Share your setup on GitHub or X!
-“In the shinobi world, those who break the rules are scum, but those who abandon their friends are worse than scum.” — Make it yours! ✨
+🌐 Share Your Rice
+Post on GitHub or X!
+“Those who break rules are scum, but abandoning friends is worse.” — Make it yours! ✨
 📜 License
-MIT License — Share, modify, and enjoy!
+MIT
 EOF
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Write sample Hyprland config
+Write configs
 write_file "hypr/hyprland.conf" <<'EOF'
-Zee Dotfiles: Hyprland Config
+Hyprland Config by zeehadhaque
 monitor=,preferred,auto,1
 exec-once=hyprpaper & waybar & random_quote.sh
 input {
@@ -144,9 +117,8 @@ windowsIn=1
 fade=1
 }
 EOF
-Write sample Alacritty config
 write_file "alacritty/alacritty.yml" <<'EOF'
-Zee Dotfiles: Alacritty Config
+Alacritty Config by zeehadhaque
 font:
 normal:
 family: JetBrainsMono
@@ -157,16 +129,14 @@ primary:
 background: '#1a1b26'
 foreground: '#c0caf5'
 EOF
-Write sample Zsh config
 write_file "zsh/.zshrc" <<'EOF'
-Zee Dotfiles: Zsh Config
+Zsh Config by zeehadhaque
 eval "$(starship init zsh)"
 source ~/.local/share/zee-dotfiles/scripts/random_quote.sh
 alias ls='ls --color=auto'
 EOF
-Write sample Starship config
 write_file "starship.toml" <<'EOF'
-Zee Dotfiles: Starship Prompt
+Starship Config by zeehadhaque
 format = """
 [$username@](bg:#ff4444 fg:#000000) [$directory](bg:#1a1b26 fg:#c0caf5) $git_branch
 $character"""
@@ -174,10 +144,9 @@ $character"""
 show_always = true
 format = "$user"
 EOF
-Write sample Hyprpaper service
 write_file "systemd/user/hyprpaper.service" <<'EOF'
 [Unit]
-Description=Zee Dotfiles Hyprpaper Wallpaper Rotator
+Description=Hyprpaper Wallpaper Rotator by zeehadhaque
 After=graphical-session.target
 [Service]
 ExecStart=/usr/bin/hyprpaper
@@ -185,76 +154,68 @@ Restart=always
 [Install]
 WantedBy=graphical-session.target
 EOF
-Write sample script for random Uchiha quotes
+Write scripts
 write_file "scripts/random_quote.sh" <<'EOF'
 #!/bin/bash
-Zee Dotfiles: Random Uchiha Quote
-quotes=(
-"In the shinobi world, those who break the rules are scum..."
-"Power is not will, it is the phenomenon of physically making things happen."
-"The people of this clan are all the same. You focus on the trivial..."
-)
+Random Quote by zeehadhaque
+quotes=("In the shinobi world, those who break rules are scum..."
+"Power is not will, it is making things happen."
+"This clan focuses on the trivial...")
 echo "${quotes[$RANDOM % ${#quotes[@]}]}"
 EOF
 chmod +x "$DOTFILES_DIR/scripts/random_quote.sh"
-Write sample fire effect script (placeholder)
 write_file "scripts/fire_effect.sh" <<'EOF'
 #!/bin/bash
-Zee Dotfiles: Terminal Fire Effect (Placeholder)
-echo "🔥 Simulating a blazing terminal effect! 🔥"
-Add actual fire effect logic (e.g., using 'aafire' or custom animation)
+Fire Effect by zeehadhaque
+echo "🔥 Blazing terminal effect! 🔥"
 EOF
 chmod +x "$DOTFILES_DIR/scripts/fire_effect.sh"
-Write sample wallpaper directory
+Create wallpapers dir
 mkdir -p "$DOTFILES_DIR/wallpapers"
-print_info "Created wallpapers directory. Add your anime wallpapers to $DOTFILES_DIR/wallpapers/"
-Create symlinks
+print_info "Add anime wallpapers to $DOTFILES_DIR/wallpapers/"
+Symlink configs
 symlink_config "hypr/hyprland.conf"
 symlink_config "alacritty/alacritty.yml"
 symlink_config "zsh/.zshrc"
 symlink_config "starship.toml"
 symlink_config "systemd/user/hyprpaper.service"
-Write USAGE.txt
+Write usage
 write_file "USAGE.txt" <<'EOF'
-Zee Dotfiles Usage
+Usage by zeehadhaque
 
 
-Ensure dependencies: hyprland, hyprpaper, alacritty, zsh, starship, waybar
+Install dependencies: sudo pacman -S hyprland hyprpaper alacritty zsh starship waybar
 
 
 Add wallpapers to wallpapers/
 
 
-Run install.sh to symlink configs
+Run install.sh
 
 
 Enable hyprpaper: systemctl --user enable --now hyprpaper.service
 
 
-Customize configs in ~/.local/share/zee-dotfiles
+Customize in ~/.local/share/zee-dotfiles
 EOF
-Write FINISH.txt
 write_file "FINISH.txt" <<'EOF'
 
 
-Zee Dotfiles Installation Complete!
-Your anime-themed Hyprland setup is ready! ✨
-Next steps:
+Installation Complete by zeehadhaque
+Setup ready! ✨
 
 
 Add wallpapers to ~/.local/share/zee-dotfiles/wallpapers/
 
 
-Tweak configs in ~/.local/share/zee-dotfiles
+Edit configs in ~/.local/share/zee-dotfiles
 
 
-Run systemctl --user enable --now hyprpaper.service for wallpaper rotation
+Enable wallpaper: systemctl --user enable --now hyprpaper.service
 
 
-Share your rice on GitHub or X!
-"Those who do not understand true pain can never understand true peace." — Enjoy your setup!
+Share on GitHub/X!
 EOF
-Finalize
-print_info "🎉 Installation complete! Check $DOTFILES_DIR/FINISH.txt for next steps."
-print_info "🔥 'The true measure of a shinobi is not how he lives, but how he dies.' — Show off your rice! 🔥"
+print_info "🎉 Setup complete! Check $DOTFILES_DIR/FINISH.txt."
+print_info "🔥 Show off your rice! 🔥"
 }
