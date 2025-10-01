@@ -15,7 +15,10 @@ Welcome to **Zee Dotfiles**, a meticulously crafted, anime-inspired dotfiles rep
 Get started with a single command to install and set up your Zee Dotfiles:
 
 - **Step 1: Run the One-Command Installation**
+
 bash -c "$(curl -sL https://raw.githubusercontent.com/khayrulislamzeehad-rgb/zee-dotfiles/main/install.sh)" && cd ~/.local/share/zee-dotfiles && ./install.sh
+
+
 text*Note: The script will prompt for confirmation. Type 'y' and press Enter to proceed. Ensure you have internet access and the following dependencies installed: `git`, `curl`, `hyprland`, `hyprpaper`, `alacritty`, `zsh`, `starship`, `waybar`. Install them with: `sudo pacman -S git curl hyprland hyprpaper alacritty zsh starship waybar`.*
 
 - **Step 2: Enable the Wallpaper Rotator**
